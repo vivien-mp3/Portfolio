@@ -16,16 +16,7 @@
             <h1>{{.ProjectName}}</h1>
             <p class="discret">{{.SecretText}}</p>
             
-            <div class="listNav">
-               <h2 id="sommaire">Sommaire:</h2>
-                <nav class="listNav__links">
-            
-                    <a class="rectButton__Alt" href="../../index.html">Accueil</a>
-                    <a class="rectButton__Alt" href="../../index.html#intro">Mon introduction</a>
-                    <a class="rectButton__Alt" href="../projectIndex.html">Mes projets</a>
-                    <a class="rectButton__Alt" href="projetreve.html#contact">Me contacter</a>
-              </nav> 
-            </div>
+            {{template "sommaire"}}
         </header>
         <main>
             <h2>Un rêve qui n'en fini pas.</h2>
