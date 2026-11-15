@@ -1,0 +1,26 @@
+{{define "projectTemplate"}}
+        {{template "header"}}
+        <header>
+            <h1>{{.ProjectName}}</h1>
+            <p class="discret">{{.SecretText}}</p>
+            
+            {{template "sommaire"}}
+        </header>
+        <main>
+            <h2>{{.ShortText}}</h2>
+            <h3>Préambule</h3>
+            <p>
+                {{.Desc}}
+                {{.Desc2}}
+            </p>
+
+           <!--  <img src="../../assets/images/projetreveTitle.png" alt="le titre du jeu. Projet Rêve."> <br><br> -->
+
+            <a class="rectButton" href="{{.Link}}" target="_blank">Repo github</a>
+
+
+
+            
+        </main>
+        {{template "footer"}}
+{{end}}

@@ -1,5 +1,5 @@
 {{define "projectIndex"}}
-{{template "header"}}
+{{template "header" }}
         
         <header>
             <h1>Mes projets !</h1>
@@ -9,6 +9,16 @@
         </header>
         <main>
             <h2>Prenez votre temps, mes projets bougent pas</h2>
+            {{range .}}
+                <h3>{{.ProjectName}}</h3>
+            <p>
+                {{.Desc}}
+            </p>
+
+            <a class="rectButton" href="/projects/{{.Id}}">Plus en détail</a> <br><br>
+            <a class="rectButton" href="{{.Link}}" target="_blank">Repo github</a>
+            {{end}}
+            <!-- 
             <h3>Projet Rêve !</h3>
             <p>
                 Pour la fin de nos Ymmersions de cette rentrée 2026, on nous a demandé de créer un projet en groupe. Plus précisément, un jeu RPG pûrement textuel où le joueur 
@@ -17,7 +27,7 @@
                 où les règles fondamentaux sont brisé.
             </p>
 
-            <a class="rectButton" href="./projetreve.html">Plus en détail</a> <br><br>
+            <a class="rectButton" href="/projects/">Plus en détail</a> <br><br>
             <a class="rectButton" href="https://github.com/vivien-mp3/ProjetRed_CHAUDRON-VIVIEN" target="_blank">Repo github de Projet Rêve</a>
             <h3>Jeu de pendu</h3>
                 <p>
@@ -33,7 +43,7 @@
             </p>
             <a class="rectButton" href="./goreloaded.html">Plus en détail</a> <br><br>
             <a class="rectButton" href="https://github.com/vivien-mp3/Go-Reloaded-CHAUDRON-VIVIEN" target="_blank">Repo github de Go-Reloaded</a>
-            <br><br>
+            <br><br> -->
         </main>
 {{template "footer"}}
 {{end}}
